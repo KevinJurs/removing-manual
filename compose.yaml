@@ -1,0 +1,17 @@
+services:
+  rentaltracker:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    stdin_open: true
+    tty: true
+    volumes:
+      - rental-data:/app/data
+      - rental-logs:/app/logs
+    environment:
+      - DB_PATH=/app/data/rental-tracker.db
+      - LOG_PATH=/app/logs/rental-tracker.log
+
+volumes:
+  rental-data:
+  rental-logs:
