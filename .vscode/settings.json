@@ -1,0 +1,11 @@
+{
+    "java.configuration.updateBuildConfiguration": "interactive",
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "rental-tracker",
+            "database": "rental-tracker.db"
+        }
+    ]
+}
