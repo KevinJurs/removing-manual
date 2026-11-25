@@ -39,7 +39,7 @@ public class Main {
         try (Connection connection = database.openConnection()){
             startupService.initialiseDatabase(connection);
             System.out.println("Database is ready.");
-
+            //test
             Scanner sc = new Scanner(System.in);
 
             ItemRepository itemRepository = new ItemRepository(connection, logger);
