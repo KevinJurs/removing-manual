@@ -34,7 +34,7 @@ public class DatabaseTest {
             ResultSet results = statement.executeQuery("PRAGMA foreign_keys")){
                 assertTrue(connection.isValid(1));
                 assertTrue(results.next());
-                assertEquals(1, results.getInt(1));
+                assertEquals(12, results.getInt(1));
             }
     }
 
