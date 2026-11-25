@@ -1,5 +1,4 @@
 rentaltracker/target/
-
 # Ignore generated application log file
 rentaltracker/app.log
 rental-tracker.log
