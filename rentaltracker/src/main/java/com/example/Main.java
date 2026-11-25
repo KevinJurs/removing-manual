@@ -7,6 +7,7 @@ import java.util.Scanner;
 
 import com.example.infrastructure.AppLogger;
 import com.example.infrastructure.Database;
+import com.example.infrastructure.PathConfig;
 import com.example.infrastructure.exception.DatabaseInitialisationException;
 import com.example.infrastructure.exception.DatabaseOpenException;
 import com.example.repository.ItemRepository;
@@ -24,7 +25,7 @@ public class Main {
     
     //starts application using default database
     public static void main(String[] args) {
-        run(Path.of("rental-tracker.db"), new AppLogger(Path.of("rental-tracker.log")));
+        run(PathConfig.getDBPath(), new AppLogger(PathConfig.getLogPath()));
     }
 
     //runs application with provided logger
@@ -38,7 +39,7 @@ public class Main {
         try (Connection connection = database.openConnection()){
             startupService.initialiseDatabase(connection);
             System.out.println("Database is ready.");
-
+            //test
             Scanner sc = new Scanner(System.in);
 
             ItemRepository itemRepository = new ItemRepository(connection, logger);
